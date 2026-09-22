@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duelo TCG - Batalha de Heróis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Seleção -->
+    <div id="selection-screen">
+        <h1 id="selection-title">Jogador 1: Escolha sua Classe</h1>
+        <div class="character-grid" id="character-grid">
+            <!-- Gerado via JS -->
+        </div>
+    </div>
+
+    <!-- Tela de Jogo (Oculta inicialmente) -->
+    <div id="game-container" class="hidden">
+        
+        <!-- PLACAR DESTRACADO -->
+        <div id="scoreboard" class="scoreboard">Placar: P1 (0) x (0) P2</div>
+
+        <!-- Painel Jogador 2 (Topo) -->
+        <div class="player-panel">
+            <div id="p2-hero" class="hero-panel"></div>
+            <div id="p2-hand" class="hand" data-player="2"></div>
+        </div>
+
+        <div id="status">Turno do Jogador 1</div>
+        
+        <div id="board"></div>
+        
+        <!-- Painel Jogador 1 (Base) -->
+        <div class="player-panel">
+            <div id="p1-hero" class="hero-panel"></div>
+            <div id="p1-hand" class="hand" data-player="1"></div>
+        </div>
+
+    </div>
+
+    <!-- TELA DE VITÓRIA DA PARTIDA -->
+    <div id="victory-screen" class="modal hidden">
+        <div class="modal-content victory-content">
+            <h1>🏆 PARABÉNS! 🏆</h1>
+            <h2 id="victory-message">O Jogador X Venceu!</h2>
+            <p>O grande campeão da Melhor de 3!</p>
+            <button id="restart-btn" class="action-btn">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante de Ajuda -->
+    <button id="help-btn" class="help-btn">❓</button>
+
+    <!-- Tela Escurecida de Regras (Modal) -->
+    <div id="rules-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2>📜 Regras do Duelo</h2>
+            <ul>
+                <li><strong>Objetivo Letal:</strong> Elimine o oponente (Melhor de 3).</li>
+                <li><strong>Como Mover:</strong> Selecione uma carta e clique no destino azul.</li>
+                <li><strong>Habilidade Única:</strong> Clique no seu Herói (painel lateral) para ativar o poder (destaque verde).</li>
+                <li><strong>Cooldown:</strong> Aguarde o número de turnos para usar o poder de novo.</li>
+                <li><strong>Ameaças no Chão:</strong> Cuidado com armadilhas!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
