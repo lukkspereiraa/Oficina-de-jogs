@@ -50,19 +50,24 @@
     </div>
 
     <!-- Botão Flutuante de Ajuda -->
-    <button id="help-btn" class="help-btn">❓</button>
+    <!-- Botão Flutuante de Ajuda Aprimorado -->
+    <button id="help-btn" class="help-btn">
+        <span class="help-icon">📖</span>
+        <span class="help-text">Regras</span>
+    </button>
 
     <!-- Tela Escurecida de Regras (Modal) -->
+    <!-- Tela Escurecida de Regras (Modal) Aprimorada -->
     <div id="rules-modal" class="modal hidden">
         <div class="modal-content">
             <span id="close-modal" class="close-btn">&times;</span>
-            <h2>📜 Regras do Duelo</h2>
+            <h2>📜 Manual do Duelo TCG</h2>
             <ul>
-                <li><strong>Objetivo Letal:</strong> Elimine o oponente (Melhor de 3).</li>
-                <li><strong>Como Mover:</strong> Selecione uma carta e clique no destino azul.</li>
-                <li><strong>Habilidade Única:</strong> Clique no seu Herói (painel lateral) para ativar o poder (destaque verde).</li>
-                <li><strong>Cooldown:</strong> Aguarde o número de turnos para usar o poder de novo.</li>
-                <li><strong>Ameaças no Chão:</strong> Cuidado com armadilhas!</li>
+                <li><strong>🎯 Objetivo & Vitória (Melhor de 3):</strong> O jogo é disputado no sistema "Melhor de 3". Para vencer um round, você deve eliminar o herói oponente movendo sua peça <strong>exatamente para a mesma casa que ele ocupa</strong>. O primeiro a vencer 2 rounds conquista a coroa da partida!</li>
+                <li><strong>🃏 Cartas & Movimento:</strong> Cada classe possui um deck exclusivo de 10 cartas temáticas. No seu turno, você gerencia uma mão de 4 cartas. Ao clicar em uma carta, o tabuleiro destacará os destinos válidos em azul. Ao se mover, a carta usada é descartada e uma nova é sacada automaticamente do seu baralho.</li>
+                <li><strong>⚡ Poderes de Herói:</strong> Em vez de usar uma carta de movimento, você pode clicar no <strong>painel lateral do seu Herói</strong> para ativar a habilidade especial da sua classe (que brilhará em verde-água). Cada herói tem um efeito único, como o teleporte global do Mago ou o salto frontal do Guerreiro.</li>
+                <li><strong>⏳ Sistema de Cooldown:</strong> Por serem extremamente fortes, as habilidades especiais entram em recarga após o uso. O painel do herói exibirá o contador de turnos (CD) restantes até que o poder possa ser ativado novamente.</li>
+                <li><strong>🕸️ Armadilhas Táticas:</strong> Classes estratégicas (como o Assassino) podem posicionar armadilhas letais no campo de batalha. Fique atento a cada passo: se o seu herói cair em uma armadilha inimiga, você perde o round imediatamente!</li>
             </ul>
         </div>
     </div>
